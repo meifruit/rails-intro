@@ -1,7 +1,15 @@
-<h1>Ask your coach anything!</h1>
+<div class="container">
+ <h2>Ask your coach anything!</h2>
 
-<form action="/answer" method="get">
-  <label for="question">Question:</label>
-  <input type="text" name="question">
-  <input type="submit" value="Ask!">
-</form>
+  <form action="/answer" method="get">
+    <label for="question">Question:</label>
+    <input type="text" name="question" value="<%#= params[:question] %>">
+    <input type="submit" value="Ask!" class="btn btn-primary">
+  </form>
+  <p>
+   <%# <%= link_to 'Ask!', root_path, class: 'btn btn-light' %>
+   <%= link_to root_path, class: 'btn btn-light' do %>
+    <i class="fa-solid fa-house-user"></i>
+   <% end %>
+  </p>
+</div>
